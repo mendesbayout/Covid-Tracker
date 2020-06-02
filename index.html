@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html id="corona" lang="pt-br">
+
+<head>
+    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="favicon.ico">
+    <!-- viewport mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CODELAB: Add iOS meta tags and icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <!-- CODELAB: Add meta theme-color -->
+    <meta name="theme-color" content="#2F3BA2" />
+
+    <meta charset="utf-8">
+    <script src="app.js" charset="utf-8"></script>
+    <title>Covid Tracker RJ</title>
+
+
+    <link rel="stylesheet" href="style.css">>
+
+    <script> 
+        if ('serviceWorker' in navigator) {
+
+            console.log("Will the service worker register?");
+
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (reg) {
+
+                    console.log("Yes, it did.");
+
+
+                }).catch(function (err) {
+
+                    console.log("No it didn't. This happened:", err)
+
+                });
+        }
+    </script><!-- Service worker script (yes/no)-->
+
+
+</head><!-- TODOS OS LINKS DECLARADOS -->
+<h1>Análise de Casos - Coronavírus - RJ</h1>
+
+<body><!-- SIDEBAR-->
+    <header>
+
+        <div id="lateral">
+            <div id="menu">
+
+                <h3 class="link-titulo">Mais informações</h3>
+                <ul class="box">
+                    <li><a href="#">Painel Internacional OMS</a></li>
+                    <li><a href="#">Painel Ministério da saúde</a></li>
+                    <li><a href="http://painel.saude.rj.gov.br/monitoramento/covid19.html">Painel Oficial do Estado do
+                            Rio de janeiro</a></li>
+                    <li><a href="#">Painel Covid-19 Open-source</a></li>
+                </ul>
+
+                <h3 class="link-titulo">Fato ou fake</h3>
+                <ul class="box">
+                    <li><a href="#">Estudo sobre o uso de remédios sem prescrição</a></li>
+                    <li><a href="#">Estudo sobre as princpais fake news em circulação</a></li>
+                    <!-- mais links -->
+                </ul>
+
+                <h3 class="link-titulo">Fontes internacionais de informação</h3>
+                <ul class="box">
+                    <li><a href="#">Painel oficial da União Européia</a></li>
+                    <li><a href="#">Painel oficinal Chines</a></li>
+                    <!-- mais links -->
+                </ul>
+
+                <!-- mais seções -->
+
+            </div> <!-- Mais informaçôes -->
+        </div id="link"> <!-- Mais informaçôes  -->
+        <div>
+        </div> <!--Mais informaçôes  -->
+
+
+    </header>
+
+
+    <section id="main-section"> <!-- Searchbox-->
+
+        <div id="d0">
+            <h4 #id="title">Digite a cidade para fazer a busca</h4>
+            <input type="textr" class="txtcity" id="txtcity">
+            <input type="button" id="find" class="w3-card" value="Buscar" onclick="renderCity()">
+        </div><i class="fas fa-virus es"></i></div>
+        </div>
+    </section>
+
+    <div id="d1" class="w3-card"></div> <!-- Primeiro Card-->
+    <div id="d2" class="w3-right-align"></div><!-- Segundo Card-->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><!-- Script para rodar o request do JSON-->
+
+    <script src="app.js"></script>
+
+</body>
+
+
+<footer id="Foot" class="container">
+    <h6 id="Footinfo">Os números de casos são atualizados diariamente.</h6>
+    <h7 id="Footinfo">POWERED BY https://brasil.io/api</h7>
+</footer>
+<i class="fas fa-cloud"></i>
+
+</html>
